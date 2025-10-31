@@ -1,0 +1,10 @@
+FROM golang:1.25
+
+WORKDIR /app
+
+# Este se quita si utilizo el docker run -p8080:8080 -v $(pwd):/app -it --rm --name my-running-app golantest
+# COPY . .
+
+expose 8080
+
+CMD ["go", "run", "./For_video.go"]
